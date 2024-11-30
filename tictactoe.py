@@ -1,0 +1,68 @@
+import constants as c
+
+class Board:
+    def __init__(self):
+        self.board = [[c.E,c.E,c.E],
+                      [c.E,c.E,c.E],
+                      [c.E,c.E,c.E]]
+        
+        self.turns = 0
+        self.x_turns = 0
+        self.o_turns = 0
+        
+    def set_space(self, player, i, j):
+        if self.board[i][j] == c.E:
+           self.board[i][j] = player
+           self.turns += 1
+           if player == c.X:
+               self.x_turns += 1
+           else:
+               self.o_turns += 1
+            
+    def get_space(self, i, j):
+        return self.board[i][j]
+    
+    def print_board(self):
+        for r in self.board:
+            print('+-+-+\n|', end='')
+            for c in r:
+                print(f'{c.options[self.board[r][c]]}|')
+        print('\n+-+-+')
+
+    def current_player(self):
+        if self.x_turns > self.o_turns: #Assume that X goes first
+            return c.X
+        else:
+            return c.O
+
+    def winner_found(self):
+        if self.turns < 4: #Earliest win happens on turn 4
+            return None #No one has won yet
+        else:
+            #Set of win condition points in a tic tac toe game
+            win_conditions = [[(0,0),(0,1),(0,2)], #column 0
+                              [(1,0),(1,1),(1,2)], #column 1
+                              [(2,0),(2,1),(2,2)], #column 2
+                              [(0,0),(1,0),(2,0)], #row 0
+                              [(1,0),(1,1),(2,1)], #row 1
+                              [(0,2),(1,2),(2,2)], #row 2
+                              [(0,0),(1,1),(2,2)], #diagnol top left to bottom right
+                              [(2,0),(1,1),(0,2)]] #diagnol top right to bottom left
+            
+            cases = [c.O, c.X]
+
+            for c in cases:
+                for condition in win_conditions:
+                    condition_met = True
+                    for point in condition:
+                        #If at least one position in the win condition does not match,
+                        #that specific win condition was not met, so we stop iterating. 
+                        if self.board[point[0]][point[1]] != c:
+                            condition_met = False
+                            break
+
+                    #Return the winning player
+                    if condition_met:
+                        return c
+                    
+            return None #No one has won yet
