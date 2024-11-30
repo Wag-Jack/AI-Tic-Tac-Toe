@@ -23,14 +23,16 @@ class Board:
         return self.board[i][j]
     
     def print_board(self):
-        for r in self.board:
-            print('+-+-+\n|', end='')
-            for c in r:
-                print(f'{c.options[self.board[r][c]]}|')
-        print('\n+-+-+')
+        for r in range(3):
+            print('+-+-+-+')
+            print('|', end='')
+            for c in range(3):
+                print(f'{self.board[r][c]}|', end='')
+            print()
+        print('+-+-+-+')
 
     def current_player(self):
-        if self.x_turns > self.o_turns: #Assume that X goes first
+        if self.x_turns == self.o_turns: #Assume that X goes first
             return c.X
         else:
             return c.O
@@ -51,18 +53,28 @@ class Board:
             
             cases = [c.O, c.X]
 
-            for c in cases:
+            for ca in cases:
                 for condition in win_conditions:
                     condition_met = True
                     for point in condition:
                         #If at least one position in the win condition does not match,
                         #that specific win condition was not met, so we stop iterating. 
-                        if self.board[point[0]][point[1]] != c:
+                        if self.board[point[0]][point[1]] != ca:
                             condition_met = False
                             break
 
                     #Return the winning player
                     if condition_met:
-                        return c
+                        return ca
                     
             return None #No one has won yet
+
+    def result(self):
+        result = self.winner_found()
+        
+        if result != None:
+            return result
+        elif self.turns >= 9:
+            return c.T
+        else:
+            return None

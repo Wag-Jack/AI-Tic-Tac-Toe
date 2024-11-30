@@ -1,8 +1,7 @@
 E = ' '
 O = 'O'
 X = 'X'
-
-options = {E:' ',O:'O',X:'X'}
+T = 'tie'
 
 def in_bounds(x, y):
-    return x in range(2) and y in range(2)
+    return x in range(3) and y in range(3)
