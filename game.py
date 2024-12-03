@@ -3,11 +3,11 @@ import constants as c
 
 def game(mode):
     b = ttt.Board()
+    b.print_board()
 
-    state = None
-    while state == None:
+    while not b.terminal():
         turn = b.current_player()
-        b.print_board()
+        print(f'{turn}\'S TURN!')
 
         valid_move = False
         while not valid_move:
@@ -16,15 +16,16 @@ def game(mode):
 
             if c.in_bounds(x, y):
                 valid_move = True
-                b.set_space(turn, x, y)
+                b.set_space(turn, y, x)
+                b.print_board()
             else:
                 print("Invalid move, please try again.")
 
-        state = b.result()
-
-    if state == c.X:
+    result = b.result()
+    
+    if result == 1:
         print("Human player wins!")
-    elif state == c.O:
+    elif result == -1:
         print("Computer player wins!")
     else:
         print("Tie!")

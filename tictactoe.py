@@ -38,43 +38,49 @@ class Board:
             return c.O
 
     def winner_found(self):
-        if self.turns < 4: #Earliest win happens on turn 4
-            return None #No one has won yet
-        else:
-            #Set of win condition points in a tic tac toe game
-            win_conditions = [[(0,0),(0,1),(0,2)], #column 0
-                              [(1,0),(1,1),(1,2)], #column 1
-                              [(2,0),(2,1),(2,2)], #column 2
-                              [(0,0),(1,0),(2,0)], #row 0
-                              [(1,0),(1,1),(2,1)], #row 1
-                              [(0,2),(1,2),(2,2)], #row 2
-                              [(0,0),(1,1),(2,2)], #diagnol top left to bottom right
-                              [(2,0),(1,1),(0,2)]] #diagnol top right to bottom left
+        #Set of win condition points in a tic tac toe game
+        win_conditions = [[(0,0),(0,1),(0,2)], #column 0
+                          [(1,0),(1,1),(1,2)], #column 1
+                          [(2,0),(2,1),(2,2)], #column 2
+                          [(0,0),(1,0),(2,0)], #row 0
+                          [(1,0),(1,1),(2,1)], #row 1
+                          [(0,2),(1,2),(2,2)], #row 2
+                          [(0,0),(1,1),(2,2)], #diagnol top left to bottom right
+                          [(2,0),(1,1),(0,2)]] #diagnol top right to bottom left
             
-            cases = [c.O, c.X]
+        cases = [c.O, c.X]
 
-            for ca in cases:
-                for condition in win_conditions:
-                    condition_met = True
-                    for point in condition:
-                        #If at least one position in the win condition does not match,
-                        #that specific win condition was not met, so we stop iterating. 
-                        if self.board[point[0]][point[1]] != ca:
-                            condition_met = False
-                            break
+        for ca in cases:
+            for condition in win_conditions:
+                condition_met = True
+                for point in condition:
+                    #If at least one position in the win condition does not match,
+                    #that specific win condition was not met, so we stop iterating. 
+                    if self.board[point[1]][point[0]] != ca:
+                        condition_met = False
+                        break
 
-                    #Return the winning player
-                    if condition_met:
-                        return ca
+                #Return the winning player
+                if condition_met:
+                    return ca
                     
-            return None #No one has won yet
+        return None #No one has won yet
+
+    def terminal(self):
+        if self.winner_found() == None:
+            for row in range(3):
+                for col in range(3):
+                    if self.board[row][col] == c.E:
+                        return False
+                
+        return True
 
     def result(self):
         result = self.winner_found()
         
-        if result != None:
-            return result
-        elif self.turns >= 9:
-            return c.T
+        if result == None:
+            return 0
+        elif result == c.O:
+            return -1
         else:
-            return None
+            return 1
