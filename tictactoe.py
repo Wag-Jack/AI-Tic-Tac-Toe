@@ -1,4 +1,5 @@
 import constants as c
+import copy
 
 class Board:
     def __init__(self):
@@ -36,6 +37,36 @@ class Board:
             return c.X
         else:
             return c.O
+
+    def actions(self):
+        actions = set()
+        for row in range(3):
+            for col in range(3):
+                #Include any empty spaces in actions
+                if self.board[row][col] == c.E:
+                    actions.add((row,col))
+
+        return actions
+
+    def resultant(self, action):
+        resultant = Board()
+        resultant.board = copy.deepcopy(self.board) # Generates deep copy of board
+        next_input = self.current_player()
+
+        row, col = action # Maps action to coordinate point on board
+
+        # Maps next input to resultant board and returns the board
+        resultant.board[row][col] = next_input
+        resultant.turns = self.turns + 1
+
+        if next_input == c.X:
+            resultant.x_turns = self.x_turns + 1
+            resultant.o_turns = self.o_turns
+        else: #Next turn is O
+            resultant.x_turns = self.x_turns
+            resultant.o_turns = self.o_turns + 1
+
+        return resultant
 
     def winner_found(self):
         #Set of win condition points in a tic tac toe game
@@ -79,8 +110,8 @@ class Board:
         result = self.winner_found()
         
         if result == None:
-            return 0
+            return 0 #Tie
         elif result == c.O:
-            return -1
+            return -1 #AI wins
         else:
-            return 1
+            return 1 #Human wins

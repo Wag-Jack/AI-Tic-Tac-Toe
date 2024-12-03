@@ -1,7 +1,20 @@
+import time
 import tictactoe as ttt
 import constants as c
+from minimax import minimax
 
 def game(mode):
+    match mode:
+        case 1:
+            #opponent = minimax
+            print('',end='')
+        case 2:
+            #opponent = minimax
+            print('',end='')
+        case _:
+            #error
+            print('',end='')
+
     b = ttt.Board()
     b.print_board()
 
@@ -9,17 +22,25 @@ def game(mode):
         turn = b.current_player()
         print(f'{turn}\'S TURN!')
 
-        valid_move = False
-        while not valid_move:
-            x = int(input("Choose x position: "))
-            y = int(input("Choose y position: "))
+        if turn == c.X: #Human turn
+            valid_move = False
+            while not valid_move:
+                x = int(input("Choose row: "))
+                y = int(input("Choose column: "))
 
-            if c.in_bounds(x, y):
-                valid_move = True
-                b.set_space(turn, y, x)
-                b.print_board()
-            else:
-                print("Invalid move, please try again.")
+                if c.in_bounds(x, y):
+                    valid_move = True
+                    b.set_space(turn, x, y)
+                    b.print_board()
+                else:
+                    print("Invalid move, please try again.")
+        
+        else: # AI turn
+            ai_move = minimax(b)
+            b.set_space(turn, ai_move[0], ai_move[1])
+            b.print_board()
+
+        print()
 
     result = b.result()
     
