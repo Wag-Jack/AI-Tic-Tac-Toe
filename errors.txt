@@ -1,7 +1,3 @@
-"""
-12/3 at 3:17 AM would not properly detect X winning, minimax was not acting optimally
-"""
-
 -----------------------------------------------
 WELCOME TO TIC-TAC-TOE | Choose opponent type.
 1.) Mini-Max w/ Alpha-Beta Pruning
@@ -17,83 +13,83 @@ Choice: 1
 | | | |
 +-+-+-+
 X'S TURN!
-Choose row: 1
-Choose column: 1
-+-+-+-+
-| | | |
-+-+-+-+
-| |X| |
-+-+-+-+
-| | | |
-+-+-+-+
-
-O'S TURN!
-+-+-+-+
-| |O| |
-+-+-+-+
-| |X| |
-+-+-+-+
-| | | |
-+-+-+-+
-
-X'S TURN!
-Choose row: 1
+Choose row: 0
 Choose column: 0
 +-+-+-+
-| |O| |
+|X| | |
 +-+-+-+
-|X|X| |
+| | | |
 +-+-+-+
 | | | |
 +-+-+-+
 
 O'S TURN!
 +-+-+-+
-|O|O| |
+|X| | |
 +-+-+-+
-|X|X| |
+| |O| |
 +-+-+-+
 | | | |
 +-+-+-+
 
 X'S TURN!
 Choose row: 0
-Choose column: 2
-+-+-+-+
-|O|O|X|
+Choose column: 1
 +-+-+-+
 |X|X| |
++-+-+-+
+| |O| |
 +-+-+-+
 | | | |
 +-+-+-+
 
 O'S TURN!
 +-+-+-+
-|O|O|X|
+|X|X|O|
 +-+-+-+
-|X|X| |
+| |O| |
 +-+-+-+
-|O| | |
+| | | |
++-+-+-+
+
+X'S TURN!
+Choose row: 2
+Choose column: 0
++-+-+-+
+|X|X|O|
++-+-+-+
+| |O| |
++-+-+-+
+|X| | |
++-+-+-+
+
+O'S TURN!
++-+-+-+
+|X|X|O|
++-+-+-+
+|O|O| |
++-+-+-+
+|X| | |
 +-+-+-+
 
 X'S TURN!
 Choose row: 1
 Choose column: 2
 +-+-+-+
+|X|X|O|
++-+-+-+
 |O|O|X|
 +-+-+-+
-|X|X|X|
-+-+-+-+
-|O| | |
+|X| | |
 +-+-+-+
 
 O'S TURN!
 +-+-+-+
+|X|X|O|
++-+-+-+
 |O|O|X|
 +-+-+-+
-|X|X|X|
-+-+-+-+
-|O| |O|
+|X|O| |
 +-+-+-+
 
-X'S TURN!
+Computer player wins!

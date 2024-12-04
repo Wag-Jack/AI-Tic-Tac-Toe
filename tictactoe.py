@@ -11,6 +11,12 @@ class Board:
         self.x_turns = 0
         self.o_turns = 0
         
+    def valid_move(self, i, j):
+        if c.in_bounds(i, j) and self.board[i][j] == c.E:
+            return True
+        else:
+            return False
+
     def set_space(self, player, i, j):
         if self.board[i][j] == c.E:
            self.board[i][j] = player
@@ -43,7 +49,7 @@ class Board:
         for row in range(3):
             for col in range(3):
                 #Include any empty spaces in actions
-                if self.board[row][col] == c.E:
+                if self.board[col][row] == c.E:
                     actions.add((row,col))
 
         return actions
@@ -79,7 +85,7 @@ class Board:
                           [(0,0),(1,1),(2,2)], #diagnol top left to bottom right
                           [(2,0),(1,1),(0,2)]] #diagnol top right to bottom left
             
-        cases = [c.O, c.X]
+        cases = [c.X, c.O]
 
         for ca in cases:
             for condition in win_conditions:
@@ -97,6 +103,7 @@ class Board:
                     
         return None #No one has won yet
 
+    #Determines if the game has ended or not
     def terminal(self):
         if self.winner_found() == None:
             for row in range(3):

@@ -28,7 +28,7 @@ def game(mode):
                 x = int(input("Choose row: "))
                 y = int(input("Choose column: "))
 
-                if c.in_bounds(x, y):
+                if b.valid_move(x, y):
                     valid_move = True
                     b.set_space(turn, x, y)
                     b.print_board()
