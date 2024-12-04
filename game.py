@@ -15,11 +15,11 @@ def game(mode):
             #error
             print('',end='')
 
-    b = ttt.Board()
-    b.print_board()
+    b = ttt.initial()
+    ttt.print_board(b)
 
-    while not b.terminal():
-        turn = b.current_player()
+    while not ttt.terminal(b):
+        turn = ttt.current_player(b)
         print(f'{turn}\'S TURN!')
 
         if turn == c.X: #Human turn
@@ -28,21 +28,21 @@ def game(mode):
                 x = int(input("Choose row: "))
                 y = int(input("Choose column: "))
 
-                if b.valid_move(x, y):
+                if ttt.valid_move(b, x, y):
                     valid_move = True
-                    b.set_space(turn, x, y)
-                    b.print_board()
+                    b[x][y] = turn
+                    ttt.print_board(b)
                 else:
                     print("Invalid move, please try again.")
         
         else: # AI turn
             ai_move = minimax(b)
-            b.set_space(turn, ai_move[0], ai_move[1])
-            b.print_board()
+            b[ai_move[0]][ai_move[1]] = turn
+            ttt.print_board(b)
 
         print()
 
-    result = b.result()
+    result = ttt.result(b)
     
     if result == 1:
         print("Human player wins!")

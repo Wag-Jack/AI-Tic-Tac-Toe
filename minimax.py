@@ -1,29 +1,29 @@
 import constants as c
-from tictactoe import Board
+import tictactoe as ttt
 
 def minimax(board):
-    if board.terminal():
+    if ttt.terminal(board):
         return None
     
-    curr = board.current_player()
+    curr = ttt.current_player(board)
 
     if curr == c.X: #X will be the max player (find max of min_value())
         score = float('-inf')
         optimal_move = None
 
-        for a in board.actions():
-            val = min_value(board.resultant(a))
+        for a in ttt.actions(board):
+            val = min_value(ttt.resultant(board, a))
 
             if val > score:
                 score = val
                 optimal_move = a
 
-    else:
+    else: #O will be the min player (fid min of max_value())
         score = float('inf')
         optimal_move = None
 
-        for a in board.actions():
-            val = max_value(board.resultant(a))
+        for a in ttt.actions(board):
+            val = max_value(ttt.resultant(board, a))
 
             if val < score:
                 score = val
@@ -33,24 +33,24 @@ def minimax(board):
 
 
 def min_value(board):
-    if board.terminal():
-        return board.result()
+    if ttt.terminal(board):
+        return ttt.result(board)
     
     v = float('inf')
 
-    for a in board.actions():
-        v = min(v, max_value(board.resultant(a)))
+    for a in ttt.actions(board):
+        v = min(v, max_value(ttt.resultant(board, a)))
 
     return v
 
 
 def max_value(board):
-    if board.terminal():
-        return board.result()
+    if ttt.terminal(board):
+        return ttt.result(board)
     
     v = float('-inf')
 
-    for a in board.actions():
-        v = max(v, min_value(board.resultant(a)))
+    for a in ttt.actions(board):
+        v = max(v, min_value(ttt.resultant(board, a)))
 
     return v

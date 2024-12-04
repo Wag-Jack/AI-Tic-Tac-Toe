@@ -1,86 +1,76 @@
 import constants as c
 import copy
+import time
 
-class Board:
-    def __init__(self):
-        self.board = [[c.E,c.E,c.E],
-                      [c.E,c.E,c.E],
-                      [c.E,c.E,c.E]]
-        
-        self.turns = 0
-        self.x_turns = 0
-        self.o_turns = 0
-        
-    def valid_move(self, i, j):
-        if c.in_bounds(i, j) and self.board[i][j] == c.E:
-            return True
-        else:
-            return False
+def initial():
+    return [[c.E,c.E,c.E],
+            [c.E,c.E,c.E],
+            [c.E,c.E,c.E]]
 
-    def set_space(self, player, i, j):
-        if self.board[i][j] == c.E:
-           self.board[i][j] = player
-           self.turns += 1
-           if player == c.X:
-               self.x_turns += 1
-           else:
-               self.o_turns += 1
-            
-    def get_space(self, i, j):
-        return self.board[i][j]
+
+def valid_move(board, row, col):
+    if c.in_bounds(row,col) and board[row][col] == c.E:
+        return True
+    else:
+        return False
     
-    def print_board(self):
-        for r in range(3):
-            print('+-+-+-+')
-            print('|', end='')
-            for c in range(3):
-                print(f'{self.board[r][c]}|', end='')
-            print()
-        print('+-+-+-+')
 
-    def current_player(self):
-        if self.x_turns == self.o_turns: #Assume that X goes first
+def print_board(board):
+    for row in range(3):
+        print('+-+-+-+')
+        print('|', end='')
+        for col in range(3):
+            print(f'{board[row][col]}|', end='')
+        print()
+    print('+-+-+-+')
+
+
+def current_player(board):
+    if board == initial():
+        return c.X
+    else:
+        x_turns = 0
+        o_turns = 0
+
+        for row in range(3):
+            for col in range(3):
+                if board[row][col] == c.X:
+                    x_turns += 1
+                elif board[row][col] == c.O:
+                    o_turns += 1
+                
+        if x_turns == o_turns:
             return c.X
         else:
             return c.O
+        
 
-    def actions(self):
-        actions = set()
-        for row in range(3):
-            for col in range(3):
-                #Include any empty spaces in actions
-                if self.board[col][row] == c.E:
-                    actions.add((row,col))
+def actions(board):
+    actions = set()
+    for row in range(3):
+        for col in range(3):
+            if board[row][col] == c.E:
+                actions.add((row,col))
 
-        return actions
+    return actions
 
-    def resultant(self, action):
-        resultant = Board()
-        resultant.board = copy.deepcopy(self.board) # Generates deep copy of board
-        next_input = self.current_player()
 
-        row, col = action # Maps action to coordinate point on board
+def resultant(board, action):
+    resultant = copy.deepcopy(board)
 
-        # Maps next input to resultant board and returns the board
-        resultant.board[row][col] = next_input
-        resultant.turns = self.turns + 1
+    row, col = action
+    resultant[row][col] = current_player(board)
 
-        if next_input == c.X:
-            resultant.x_turns = self.x_turns + 1
-            resultant.o_turns = self.o_turns
-        else: #Next turn is O
-            resultant.x_turns = self.x_turns
-            resultant.o_turns = self.o_turns + 1
+    return resultant
 
-        return resultant
 
-    def winner_found(self):
-        #Set of win condition points in a tic tac toe game
+def winner_found(board):
+    #Set of win condition points in a tic tac toe game
         win_conditions = [[(0,0),(0,1),(0,2)], #column 0
                           [(1,0),(1,1),(1,2)], #column 1
                           [(2,0),(2,1),(2,2)], #column 2
                           [(0,0),(1,0),(2,0)], #row 0
-                          [(1,0),(1,1),(2,1)], #row 1
+                          [(0,1),(1,1),(2,1)], #row 1
                           [(0,2),(1,2),(2,2)], #row 2
                           [(0,0),(1,1),(2,2)], #diagnol top left to bottom right
                           [(2,0),(1,1),(0,2)]] #diagnol top right to bottom left
@@ -93,7 +83,7 @@ class Board:
                 for point in condition:
                     #If at least one position in the win condition does not match,
                     #that specific win condition was not met, so we stop iterating. 
-                    if self.board[point[1]][point[0]] != ca:
+                    if board[point[0]][point[1]] != ca:
                         condition_met = False
                         break
 
@@ -103,22 +93,23 @@ class Board:
                     
         return None #No one has won yet
 
-    #Determines if the game has ended or not
-    def terminal(self):
-        if self.winner_found() == None:
-            for row in range(3):
-                for col in range(3):
-                    if self.board[row][col] == c.E:
-                        return False
-                
-        return True
 
-    def result(self):
-        result = self.winner_found()
+def terminal(board):
+    if winner_found(board) == None:
+        for row in range(3):
+            for col in range(3):
+                if board[row][col] == c.E:
+                    return False
+                
+    return True
+
+
+def result(board):
+    result = winner_found(board)
         
-        if result == None:
-            return 0 #Tie
-        elif result == c.O:
-            return -1 #AI wins
-        else:
-            return 1 #Human wins
+    if result == c.X:
+        return 1 #Human wins
+    elif result == c.O:
+        return -1 #AI wins
+    else:
+        return 0 #Tie
