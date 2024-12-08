@@ -2,6 +2,7 @@ import time
 import tictactoe as ttt
 import constants as c
 from minimax import minimax
+from mcst import mcst
 
 def game(mode):
     match mode:
@@ -36,7 +37,11 @@ def game(mode):
                     print("Invalid move, please try again.")
         
         else: # AI turn
-            ai_move = minimax(b)
+            if mode == 1:
+                ai_move = minimax(b)
+            else:
+                ai_move = mcst(b, 0)
+            
             b[ai_move[0]][ai_move[1]] = turn
             ttt.print_board(b)
 

@@ -44,6 +44,24 @@ def current_player(board):
         else:
             return c.O
         
+def current_opponent(board):
+    if board == terminal(board):
+        return None
+    else:
+        x_turns = 0
+        o_turns = 0
+
+        for row in range(3):
+            for col in range(3):
+                if board[row][col] == c.X:
+                    x_turns += 1
+                elif board[row][col] == c.O:
+                    o_turns += 1
+        
+        if x_turns == o_turns:
+            return c.O
+        else:
+            return c.X
 
 def actions(board):
     actions = set()
