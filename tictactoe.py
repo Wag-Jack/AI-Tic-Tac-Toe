@@ -7,14 +7,12 @@ def initial():
             [c.E,c.E,c.E],
             [c.E,c.E,c.E]]
 
-
 def valid_move(board, row, col):
     if c.in_bounds(row,col) and board[row][col] == c.E:
         return True
     else:
         return False
     
-
 def print_board(board):
     for row in range(3):
         print('+-+-+-+')
@@ -23,7 +21,6 @@ def print_board(board):
             print(f'{board[row][col]}|', end='')
         print()
     print('+-+-+-+')
-
 
 def current_player(board):
     if board == initial():
@@ -72,7 +69,6 @@ def actions(board):
 
     return actions
 
-
 def resultant(board, action):
     resultant = copy.deepcopy(board)
 
@@ -80,7 +76,6 @@ def resultant(board, action):
     resultant[row][col] = current_player(board)
 
     return resultant
-
 
 def winner_found(board):
     #Set of win condition points in a tic tac toe game
@@ -111,7 +106,6 @@ def winner_found(board):
                     
         return None #No one has won yet
 
-
 def terminal(board):
     if winner_found(board) == None:
         for row in range(3):
@@ -120,7 +114,6 @@ def terminal(board):
                     return False
                 
     return True
-
 
 def result(board):
     result = winner_found(board)

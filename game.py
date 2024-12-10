@@ -40,7 +40,7 @@ def game(mode):
             if mode == 1:
                 ai_move = minimax(b)
             else:
-                ai_move = mcst(b, 0)
+                ai_move = mcst(b)
             
             b[ai_move[0]][ai_move[1]] = turn
             ttt.print_board(b)
