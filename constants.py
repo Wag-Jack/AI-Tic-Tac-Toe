@@ -1,5 +1,3 @@
-import tictactoe as ttt
-
 E = ' '
 O = 'O'     #Minimax value of -1
 X = 'X'     #Minimax value of 1
@@ -14,9 +12,10 @@ def in_bounds(x, y):
 
 #Tree data structure for MCST
 class Tree:
-    def __init__(self, state, parent=None):
+    def __init__(self, state, parent=None, move=None):
         self.state = state #Current board state
-        self.parent = parent 
+        self.parent = parent
+        self.move = move #Move which resulted in the node's board state 
         self.children = []
         self.visits = 0 #Amount of times this board node has been visited
         self.wins = 0 #Amount of wins after visiting this node
