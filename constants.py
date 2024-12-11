@@ -34,3 +34,10 @@ class Tree:
     
     def is_root(self):
         return self.parent is None
+    
+    def print_tree(self, level=0):
+        indent = '  ' * level
+        print(f'{indent}Move: {self.move}, Wins/Visits: {self.wins}/{self.visits}, State:\n{indent}{self.state}')
+
+        for child in self.children:
+            child.print_tree(level + 1)

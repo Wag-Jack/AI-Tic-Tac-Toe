@@ -9,26 +9,26 @@ from constants import Tree
 
 def mcst(board):
     root = c.Tree(board)
-    budget = 100
+    budget = 10
     while budget > 0:
         node = root
         
-        print(f'Budget remaining: {budget}')
+        #print(f'Budget remaining: {budget}')
 
         # SELECTION
         while node.children and not ttt.terminal(node.state): #and fully expanded
-            print(f'Selecting node. Current state: {node.state}')
+            #print(f'Selecting node. Current state: {node.state}')
             node = selection(node)
 
         # EXPANSION
         if not ttt.terminal(node.state):
-            print(f'Expanding node. Current state: {node.state}')
+            #print(f'Expanding node. Current state: {node.state}')
             node = expand(node)
 
         # SIMULATION
         result = simulation(node)
 
-        print(f'Simulated result: {result}')
+        #print(f'Simulated result: {result}')
 
         # BACKPROPAGATION
         while node is not None:
@@ -37,6 +37,7 @@ def mcst(board):
 
         budget -= 1
 
+    root.print_tree()
     chosen_child = choose_best_child(root)
     print(f'Chosen child move: {chosen_child.move}')
     return chosen_child.move
@@ -113,7 +114,8 @@ def simulation(node):
 
 def update_statistics(node, result):    
     node.visits += 1
-    node.wins += result
+    if result == 1:
+        node.wins += result
 
 def choose_best_child(node):
     highest_win_rate = c.MIN

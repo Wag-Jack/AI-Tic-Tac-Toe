@@ -2,10 +2,11 @@ from mcst import mcst
 import tictactoe as ttt
 import constants as c
 
-board = [[c.E,c.E,c.E],
-         [c.E,c.X,c.E],
-         [c.E,c.E,c.E]]
-optimal_move = mcst(board)
+board = [[c.X,c.E,c.E],
+         [c.X,c.O,c.E],
+         [c.O,c.X,c.O]]
 
-board = ttt.resultant(board, optimal_move)
-ttt.print_board(board)
+while not ttt.terminal(board):
+    optimal_move = mcst(board)
+    board = ttt.resultant(board, optimal_move)
+    ttt.print_board(board)
