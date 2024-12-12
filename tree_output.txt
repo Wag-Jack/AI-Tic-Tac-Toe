@@ -1,10 +1,70 @@
-Move: None, Wins/Visits: -2/1000
-State:[['X', ' ', ' '], ['O', 'X', ' '], ['X', ' ', 'O']]
-  Move: (2, 1), Wins/Visits: 2/1000
-  State:[['X', ' ', ' '], ['O', 'X', ' '], ['X', 'O', 'O']]
-    Move: (1, 2), Wins/Visits: -1/999
-    State:[['X', ' ', ' '], ['O', 'X', 'X'], ['X', 'O', 'O']]
-      Move: (0, 2), Wins/Visits: 0/998
-      State:[['X', ' ', 'O'], ['O', 'X', 'X'], ['X', 'O', 'O']]
-        Move: (0, 1), Wins/Visits: 0/997
-        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['X', 'O', 'O']]
+Move: None, Wins/Visits: 14/1000
+State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', ' ', ' ']]
+  Move: (1, 0), Wins/Visits: 3/246
+  State:[['X', 'X', 'O'], ['O', 'X', ' '], ['O', ' ', ' ']]
+    Move: (1, 2), Wins/Visits: 2/89
+    State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', ' ', ' ']]
+      Move: (2, 1), Wins/Visits: 1/44
+      State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 0/43
+        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'O', 'X']]
+      Move: (2, 2), Wins/Visits: 1/44
+      State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 0/43
+        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'X', 'O']]
+    Move: (2, 1), Wins/Visits: 0/78
+    State:[['X', 'X', 'O'], ['O', 'X', ' '], ['O', 'X', ' ']]
+    Move: (2, 2), Wins/Visits: 0/78
+    State:[['X', 'X', 'O'], ['O', 'X', ' '], ['O', ' ', 'X']]
+  Move: (1, 2), Wins/Visits: 3/246
+  State:[['X', 'X', 'O'], [' ', 'X', 'O'], ['O', ' ', ' ']]
+    Move: (1, 0), Wins/Visits: 2/89
+    State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', ' ', ' ']]
+      Move: (2, 1), Wins/Visits: 1/46
+      State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 0/45
+        State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', 'O', 'X']]
+      Move: (2, 2), Wins/Visits: 0/42
+      State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', ' ', 'O']]
+    Move: (2, 1), Wins/Visits: 0/78
+    State:[['X', 'X', 'O'], [' ', 'X', 'O'], ['O', 'X', ' ']]
+    Move: (2, 2), Wins/Visits: 0/78
+    State:[['X', 'X', 'O'], [' ', 'X', 'O'], ['O', ' ', 'X']]
+  Move: (2, 1), Wins/Visits: 5/262
+  State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', 'O', ' ']]
+    Move: (1, 0), Wins/Visits: 2/91
+    State:[['X', 'X', 'O'], ['X', 'X', ' '], ['O', 'O', ' ']]
+      Move: (1, 2), Wins/Visits: 1/47
+      State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 0/46
+        State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', 'O', 'X']]
+      Move: (2, 2), Wins/Visits: 0/43
+      State:[['X', 'X', 'O'], ['X', 'X', ' '], ['O', 'O', 'O']]
+    Move: (1, 2), Wins/Visits: 2/90
+    State:[['X', 'X', 'O'], [' ', 'X', 'X'], ['O', 'O', ' ']]
+      Move: (1, 0), Wins/Visits: 1/47
+      State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 0/46
+        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'O', 'X']]
+      Move: (2, 2), Wins/Visits: 0/42
+      State:[['X', 'X', 'O'], [' ', 'X', 'X'], ['O', 'O', 'O']]
+    Move: (2, 2), Wins/Visits: 0/80
+    State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', 'O', 'X']]
+  Move: (2, 2), Wins/Visits: 3/246
+  State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', ' ', 'O']]
+    Move: (1, 0), Wins/Visits: 1/84
+    State:[['X', 'X', 'O'], ['X', 'X', ' '], ['O', ' ', 'O']]
+      Move: (1, 2), Wins/Visits: 0/42
+      State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', ' ', 'O']]
+      Move: (2, 1), Wins/Visits: 0/41
+      State:[['X', 'X', 'O'], ['X', 'X', ' '], ['O', 'O', 'O']]
+    Move: (1, 2), Wins/Visits: 1/83
+    State:[['X', 'X', 'O'], [' ', 'X', 'X'], ['O', ' ', 'O']]
+      Move: (1, 0), Wins/Visits: 1/43
+      State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 0/42
+        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'X', 'O']]
+      Move: (2, 1), Wins/Visits: 0/39
+      State:[['X', 'X', 'O'], [' ', 'X', 'X'], ['O', 'O', 'O']]
+    Move: (2, 1), Wins/Visits: 0/78
+    State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', 'X', 'O']]

@@ -1,3 +1,5 @@
+import tictactoe as ttt
+
 E = ' '
 O = 'O'     #Minimax value of -1
 X = 'X'     #Minimax value of 1
@@ -19,10 +21,16 @@ class Tree:
         self.children = []
         self.visits = 0 #Amount of times this board node has been visited
         self.wins = 0 #Amount of wins after visiting this node
-        self.additional_moves = [] #populate based on current state's valid moves
+        
+        self.player = ttt.current_player(self.state)
 
-    def add_child(self, child_state):
-        child = Tree(child_state, self)
+        if ttt.terminal(self.state):
+            self.additional_moves = []
+        else:
+            self.additional_moves = ttt.actions(self.state)
+
+    def add_child(self, child_state, move):
+        child = Tree(child_state, self, move)
         self.children.append(child)
         return child
     

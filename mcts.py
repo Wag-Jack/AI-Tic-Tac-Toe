@@ -14,7 +14,7 @@ def mcts(board):
         node = root
 
         # SELECTION
-        while node.children and not ttt.terminal(node.state): #and fully expanded
+        while not node.is_leaf() and node.is_fully_expanded() and not ttt.terminal(node.state): #and fully expanded
             node = selection(node)
 
         # EXPANSION
@@ -25,7 +25,7 @@ def mcts(board):
         result = simulation(node)
 
         # BACKPROPAGATION
-        update_statistics(node, result)
+        backpropagate(node, result)
 
         budget -= 1
 
@@ -42,16 +42,16 @@ def ucb(board):
     w = board.wins #amount of simulated wins for current board state
     n = board.visits #amount of simulations occuring for current board state after ith move
     C = math.sqrt(2) #Exploration parameter (TODO: make sure to check if this is fine)
-    
+
     #total amount of simulations that have occured after i moves
     if board.parent:
         t = board.parent.visits
     else:
         t = 1 #default for root
-
+        
     if n == 0:
         return c.MAX
-        
+         
     #Exploitation term
     exploitation = w / n
     
@@ -62,32 +62,20 @@ def ucb(board):
     return exploitation + exploration
 
 def selection(node):
-    highest_UCB = c.MIN
-    selected_child = None
-
-    for child in node.children:
-        child_UCB = ucb(child)
-        if child_UCB > highest_UCB:
-            highest_UCB = child_UCB
-            selected_child = child
-
-    return selected_child
+    while not node.is_leaf():
+        if node.additional_moves:
+            return node
+        node = max(node.children, key=ucb)
+    return node
 
 def expand(node):
-    # Ensures there are moves to analyze
     if not node.additional_moves:
-        node.additional_moves = list(ttt.actions(node.state))
+        return node
     
-    # Double check that we have moves to expand
-    if node.additional_moves:
-        move = node.additional_moves.pop()
-        child_state = ttt.resultant(node.state, move) #result of applying move to node.state
-        child_node = c.Tree(child_state, parent=node, move=move)
-        node.children.append(child_node)
-        return child_node
-    
-    # Return the expanded node
-    return node
+    move = node.additional_moves.pop()
+    child_state = ttt.resultant(node.state, move)
+    child_node = node.add_child(child_state, move)
+    return child_node
 
 def simulation(node):
     current = copy.deepcopy(node.state)
@@ -102,20 +90,19 @@ def simulation(node):
 
     return ttt.result(current)
 
-def update_statistics(node, result):    
+def backpropagate(node, result):    
     while node is not None:
         node.visits += 1
-        current_player = ttt.current_player(node.state)
-        if result == 1 and current_player == c.X:
-            node.wins += 1
-        elif result == -1 and current_player == c.O:
-            node.wins -= 1
-        elif result == 1 and current_player == c.O:
-            node.wins -= 1
-        elif result == -1 and current_player == c.X:
-            node.wins += 1
+        #current_player = ttt.current_player(node.state)
+        if result == 1 and node.player == c.X:
+            node.wins += 1 #X win
+        elif result == -1 and node.player == c.O:
+            node.wins += 1 #O win
 
         node = node.parent
+
+        # Flip the result to represent different players
+        result = -result
 
 def choose_best_child(node):
     highest_win_rate = c.MIN
