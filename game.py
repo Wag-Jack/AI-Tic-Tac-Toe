@@ -26,15 +26,18 @@ def game(mode):
         if turn == c.X: #Human turn
             valid_move = False
             while not valid_move:
-                x = int(input("Choose row: "))
-                y = int(input("Choose column: "))
+                try:
+                    x = int(input("Choose row: "))
+                    y = int(input("Choose column: "))
 
-                if ttt.valid_move(b, x, y):
-                    valid_move = True
-                    b[x][y] = turn
-                    ttt.print_board(b)
-                else:
-                    print("Invalid move, please try again.")
+                    if ttt.valid_move(b, x, y):
+                        valid_move = True
+                        b[x][y] = turn
+                        ttt.print_board(b)
+                    else:
+                        print("Invalid move, please try again.")
+                except ValueError:
+                    print('Invalid input, please input a valid move.')
         
         else: # AI turn
             if mode == 1:

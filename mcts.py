@@ -9,37 +9,29 @@ from constants import Tree
 
 def mcts(board):
     root = c.Tree(board)
-    budget = 100
+    budget = 1000
     while budget > 0:
         node = root
-        
-        #print(f'Budget remaining: {budget}')
 
         # SELECTION
         while node.children and not ttt.terminal(node.state): #and fully expanded
-            #print(f'Selecting node. Current state: {node.state}')
             node = selection(node)
 
         # EXPANSION
         if not ttt.terminal(node.state):
-            #print(f'Expanding node. Current state: {node.state}')
             node = expand(node)
 
         # SIMULATION
         result = simulation(node)
 
-        #print(f'Simulated result: {result}')
-
         # BACKPROPAGATION
-        while node is not None:
-            update_statistics(node, result)
-            node = node.parent
+        update_statistics(node, result)
 
         budget -= 1
 
-    root.print_tree()
+    with open('tree_output.txt','w') as file:
+        root.print_tree(file)
     chosen_child = choose_best_child(root)
-    print(f'Chosen child move: {chosen_child.move}')
     return chosen_child.move
 
 def ucb(board):
@@ -84,20 +76,18 @@ def selection(node):
 def expand(node):
     # Ensures there are moves to analyze
     if not node.additional_moves:
-        actions = ttt.actions(node.state)
-        node.additional_moves = actions
+        node.additional_moves = list(ttt.actions(node.state))
     
     # Double check that we have moves to expand
-    while node.additional_moves:
+    if node.additional_moves:
         move = node.additional_moves.pop()
         child_state = ttt.resultant(node.state, move) #result of applying move to node.state
         child_node = c.Tree(child_state, parent=node, move=move)
-        
-        if child_node.state not in [ch.state for ch in node.children]:
-            node.children.append(child_node)
+        node.children.append(child_node)
+        return child_node
     
-    # Return one of the nodes for a simulation
-    return random.choice(node.children)
+    # Return the expanded node
+    return node
 
 def simulation(node):
     current = copy.deepcopy(node.state)
@@ -113,9 +103,19 @@ def simulation(node):
     return ttt.result(current)
 
 def update_statistics(node, result):    
-    node.visits += 1
-    if result == 1:
-        node.wins += result
+    while node is not None:
+        node.visits += 1
+        current_player = ttt.current_player(node.state)
+        if result == 1 and current_player == c.X:
+            node.wins += 1
+        elif result == -1 and current_player == c.O:
+            node.wins -= 1
+        elif result == 1 and current_player == c.O:
+            node.wins -= 1
+        elif result == -1 and current_player == c.X:
+            node.wins += 1
+
+        node = node.parent
 
 def choose_best_child(node):
     highest_win_rate = c.MIN
