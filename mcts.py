@@ -7,9 +7,9 @@ import tictactoe as ttt
 
 from constants import Tree
 
-def mcst(board):
+def mcts(board):
     root = c.Tree(board)
-    budget = 10
+    budget = 100
     while budget > 0:
         node = root
         
