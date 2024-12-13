@@ -1,70 +1,710 @@
-Move: None, Wins/Visits: 14/1000
-State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', ' ', ' ']]
-  Move: (1, 0), Wins/Visits: 3/246
-  State:[['X', 'X', 'O'], ['O', 'X', ' '], ['O', ' ', ' ']]
-    Move: (1, 2), Wins/Visits: 2/89
-    State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', ' ', ' ']]
-      Move: (2, 1), Wins/Visits: 1/44
-      State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'O', ' ']]
-        Move: (2, 2), Wins/Visits: 0/43
-        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'O', 'X']]
-      Move: (2, 2), Wins/Visits: 1/44
-      State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', ' ', 'O']]
-        Move: (2, 1), Wins/Visits: 0/43
-        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'X', 'O']]
-    Move: (2, 1), Wins/Visits: 0/78
-    State:[['X', 'X', 'O'], ['O', 'X', ' '], ['O', 'X', ' ']]
-    Move: (2, 2), Wins/Visits: 0/78
-    State:[['X', 'X', 'O'], ['O', 'X', ' '], ['O', ' ', 'X']]
-  Move: (1, 2), Wins/Visits: 3/246
-  State:[['X', 'X', 'O'], [' ', 'X', 'O'], ['O', ' ', ' ']]
-    Move: (1, 0), Wins/Visits: 2/89
-    State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', ' ', ' ']]
-      Move: (2, 1), Wins/Visits: 1/46
-      State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', 'O', ' ']]
-        Move: (2, 2), Wins/Visits: 0/45
-        State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', 'O', 'X']]
-      Move: (2, 2), Wins/Visits: 0/42
-      State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', ' ', 'O']]
-    Move: (2, 1), Wins/Visits: 0/78
-    State:[['X', 'X', 'O'], [' ', 'X', 'O'], ['O', 'X', ' ']]
-    Move: (2, 2), Wins/Visits: 0/78
-    State:[['X', 'X', 'O'], [' ', 'X', 'O'], ['O', ' ', 'X']]
-  Move: (2, 1), Wins/Visits: 5/262
-  State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', 'O', ' ']]
-    Move: (1, 0), Wins/Visits: 2/91
-    State:[['X', 'X', 'O'], ['X', 'X', ' '], ['O', 'O', ' ']]
-      Move: (1, 2), Wins/Visits: 1/47
-      State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', 'O', ' ']]
-        Move: (2, 2), Wins/Visits: 0/46
-        State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', 'O', 'X']]
-      Move: (2, 2), Wins/Visits: 0/43
-      State:[['X', 'X', 'O'], ['X', 'X', ' '], ['O', 'O', 'O']]
-    Move: (1, 2), Wins/Visits: 2/90
-    State:[['X', 'X', 'O'], [' ', 'X', 'X'], ['O', 'O', ' ']]
-      Move: (1, 0), Wins/Visits: 1/47
-      State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'O', ' ']]
-        Move: (2, 2), Wins/Visits: 0/46
-        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'O', 'X']]
-      Move: (2, 2), Wins/Visits: 0/42
-      State:[['X', 'X', 'O'], [' ', 'X', 'X'], ['O', 'O', 'O']]
-    Move: (2, 2), Wins/Visits: 0/80
-    State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', 'O', 'X']]
-  Move: (2, 2), Wins/Visits: 3/246
-  State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', ' ', 'O']]
-    Move: (1, 0), Wins/Visits: 1/84
-    State:[['X', 'X', 'O'], ['X', 'X', ' '], ['O', ' ', 'O']]
-      Move: (1, 2), Wins/Visits: 0/42
-      State:[['X', 'X', 'O'], ['X', 'X', 'O'], ['O', ' ', 'O']]
-      Move: (2, 1), Wins/Visits: 0/41
-      State:[['X', 'X', 'O'], ['X', 'X', ' '], ['O', 'O', 'O']]
-    Move: (1, 2), Wins/Visits: 1/83
-    State:[['X', 'X', 'O'], [' ', 'X', 'X'], ['O', ' ', 'O']]
-      Move: (1, 0), Wins/Visits: 1/43
-      State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', ' ', 'O']]
-        Move: (2, 1), Wins/Visits: 0/42
-        State:[['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'X', 'O']]
-      Move: (2, 1), Wins/Visits: 0/39
-      State:[['X', 'X', 'O'], [' ', 'X', 'X'], ['O', 'O', 'O']]
-    Move: (2, 1), Wins/Visits: 0/78
-    State:[['X', 'X', 'O'], [' ', 'X', ' '], ['O', 'X', 'O']]
+Move: None, Wins/Visits: 820/1000
+State:[['O', ' ', ' '], ['X', 'X', ' '], [' ', ' ', ' ']]
+  Move: (0, 1), Wins/Visits: 254/290
+  State:[['O', 'O', ' '], ['X', 'X', ' '], [' ', ' ', ' ']]
+    Move: (1, 2), Wins/Visits: 117/117
+    State:[['O', 'O', ' '], ['X', 'X', 'X'], [' ', ' ', ' ']]
+    Move: (2, 1), Wins/Visits: 25/35
+    State:[['O', 'O', ' '], ['X', 'X', ' '], [' ', 'X', ' ']]
+      Move: (0, 2), Wins/Visits: 15/15
+      State:[['O', 'O', 'O'], ['X', 'X', ' '], [' ', 'X', ' ']]
+      Move: (1, 2), Wins/Visits: 2/5
+      State:[['O', 'O', ' '], ['X', 'X', 'O'], [' ', 'X', ' ']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'X', ' ']]
+          Move: (2, 0), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', 'X', ' ']]
+        Move: (2, 0), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', 'O'], [' ', 'X', 'X']]
+      Move: (2, 0), Wins/Visits: 6/9
+      State:[['O', 'O', ' '], ['X', 'X', ' '], ['O', 'X', ' ']]
+        Move: (0, 2), Wins/Visits: 0/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', 'X', ' ']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', 'X', ' ']]
+        Move: (1, 2), Wins/Visits: 5/5
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], ['O', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['O', 'X', 'X']]
+      Move: (2, 2), Wins/Visits: 2/5
+      State:[['O', 'O', ' '], ['X', 'X', ' '], [' ', 'X', 'O']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'X', 'O']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'X', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], [' ', 'X', 'O']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'X', 'O']]
+    Move: (2, 0), Wins/Visits: 67/73
+    State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', ' ', ' ']]
+      Move: (0, 2), Wins/Visits: 24/24
+      State:[['O', 'O', 'O'], ['X', 'X', ' '], ['X', ' ', ' ']]
+      Move: (1, 2), Wins/Visits: 14/16
+      State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', ' ', ' ']]
+        Move: (0, 2), Wins/Visits: 7/7
+        State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['X', ' ', ' ']]
+        Move: (2, 1), Wins/Visits: 3/4
+        State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', 'X', ' ']]
+          Move: (0, 2), Wins/Visits: 2/2
+          State:[['O', 'O', 'O'], ['X', 'X', 'O'], ['X', 'X', ' ']]
+          Move: (2, 2), Wins/Visits: 0/1
+          State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', 'X', 'O']]
+        Move: (2, 2), Wins/Visits: 3/4
+        State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', ' ', 'X']]
+          Move: (0, 2), Wins/Visits: 2/2
+          State:[['O', 'O', 'O'], ['X', 'X', 'O'], ['X', ' ', 'X']]
+          Move: (2, 1), Wins/Visits: 0/1
+          State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', 'O', 'X']]
+      Move: (2, 1), Wins/Visits: 14/16
+      State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (0, 2), Wins/Visits: 6/6
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (1, 2), Wins/Visits: 6/6
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], ['X', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 2/3
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'O', 'X']]
+          Move: (0, 2), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', ' '], ['X', 'O', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', 'O', 'X']]
+      Move: (2, 2), Wins/Visits: 14/16
+      State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (0, 2), Wins/Visits: 6/6
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 6/6
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], ['X', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 2/3
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'X', 'O']]
+          Move: (0, 2), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', ' '], ['X', 'X', 'O']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', 'X', 'O']]
+    Move: (0, 2), Wins/Visits: 18/28
+    State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', ' ', ' ']]
+      Move: (1, 2), Wins/Visits: 4/7
+      State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', ' ', ' ']]
+        Move: (2, 0), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['X', ' ', ' ']]
+        Move: (2, 1), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'X', ' ']]
+          Move: (2, 0), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', ' ', 'X']]
+          Move: (2, 0), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', ' ', 'X']]
+      Move: (2, 0), Wins/Visits: 3/6
+      State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', ' ', ' ']]
+        Move: (1, 2), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'X'], ['O', ' ', ' ']]
+        Move: (2, 1), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', 'X', ' ']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 0/1
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', ' ', 'X']]
+      Move: (2, 1), Wins/Visits: 5/7
+      State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'O', ' ']]
+        Move: (1, 2), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'X'], [' ', 'O', ' ']]
+        Move: (2, 0), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'O', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'O', 'X']]
+      Move: (2, 2), Wins/Visits: 5/7
+      State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'X'], [' ', ' ', 'O']]
+        Move: (2, 0), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'X', 'O']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'X', 'O']]
+    Move: (2, 2), Wins/Visits: 27/36
+    State:[['O', 'O', ' '], ['X', 'X', ' '], [' ', ' ', 'X']]
+      Move: (0, 2), Wins/Visits: 15/15
+      State:[['O', 'O', 'O'], ['X', 'X', ' '], [' ', ' ', 'X']]
+      Move: (1, 2), Wins/Visits: 4/7
+      State:[['O', 'O', ' '], ['X', 'X', 'O'], [' ', ' ', 'X']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', ' ', 'X']]
+          Move: (2, 0), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', ' ', 'X']]
+        Move: (2, 0), Wins/Visits: 2/3
+        State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', ' ', 'X']]
+          Move: (0, 2), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', 'O'], ['X', ' ', 'X']]
+          Move: (2, 1), Wins/Visits: 0/1
+          State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', 'O', 'X']]
+        Move: (2, 1), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', 'O'], [' ', 'X', 'X']]
+      Move: (2, 0), Wins/Visits: 1/4
+      State:[['O', 'O', ' '], ['X', 'X', ' '], ['O', ' ', 'X']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', ' ', 'X']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], ['O', ' ', 'X']]
+        Move: (2, 1), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['O', 'X', 'X']]
+      Move: (2, 1), Wins/Visits: 6/9
+      State:[['O', 'O', ' '], ['X', 'X', ' '], [' ', 'O', 'X']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'O', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'O', 'X']]
+        Move: (1, 2), Wins/Visits: 3/3
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], [' ', 'O', 'X']]
+        Move: (2, 0), Wins/Visits: 2/3
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'O', 'X']]
+          Move: (0, 2), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', ' '], ['X', 'O', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', 'O', 'X']]
+  Move: (1, 2), Wins/Visits: 4/19
+  State:[['O', ' ', ' '], ['X', 'X', 'O'], [' ', ' ', ' ']]
+    Move: (0, 1), Wins/Visits: 1/4
+    State:[['O', 'X', ' '], ['X', 'X', 'O'], [' ', ' ', ' ']]
+      Move: (0, 2), Wins/Visits: 0/1
+      State:[['O', 'X', 'O'], ['X', 'X', 'O'], [' ', ' ', ' ']]
+      Move: (2, 0), Wins/Visits: 0/1
+      State:[['O', 'X', ' '], ['X', 'X', 'O'], ['O', ' ', ' ']]
+      Move: (2, 1), Wins/Visits: 0/1
+      State:[['O', 'X', ' '], ['X', 'X', 'O'], [' ', 'O', ' ']]
+    Move: (2, 1), Wins/Visits: 0/3
+    State:[['O', ' ', ' '], ['X', 'X', 'O'], [' ', 'X', ' ']]
+      Move: (0, 1), Wins/Visits: 0/1
+      State:[['O', 'O', ' '], ['X', 'X', 'O'], [' ', 'X', ' ']]
+      Move: (0, 2), Wins/Visits: 0/1
+      State:[['O', ' ', 'O'], ['X', 'X', 'O'], [' ', 'X', ' ']]
+    Move: (2, 0), Wins/Visits: 2/5
+    State:[['O', ' ', ' '], ['X', 'X', 'O'], ['X', ' ', ' ']]
+      Move: (0, 1), Wins/Visits: 1/1
+      State:[['O', 'O', ' '], ['X', 'X', 'O'], ['X', ' ', ' ']]
+      Move: (0, 2), Wins/Visits: 1/1
+      State:[['O', ' ', 'O'], ['X', 'X', 'O'], ['X', ' ', ' ']]
+      Move: (2, 1), Wins/Visits: 0/1
+      State:[['O', ' ', ' '], ['X', 'X', 'O'], ['X', 'O', ' ']]
+      Move: (2, 2), Wins/Visits: 0/1
+      State:[['O', ' ', ' '], ['X', 'X', 'O'], ['X', ' ', 'O']]
+    Move: (0, 2), Wins/Visits: 1/4
+    State:[['O', ' ', 'X'], ['X', 'X', 'O'], [' ', ' ', ' ']]
+      Move: (0, 1), Wins/Visits: 0/1
+      State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', ' ', ' ']]
+      Move: (2, 0), Wins/Visits: 0/1
+      State:[['O', ' ', 'X'], ['X', 'X', 'O'], ['O', ' ', ' ']]
+      Move: (2, 1), Wins/Visits: 0/1
+      State:[['O', ' ', 'X'], ['X', 'X', 'O'], [' ', 'O', ' ']]
+    Move: (2, 2), Wins/Visits: 0/2
+    State:[['O', ' ', ' '], ['X', 'X', 'O'], [' ', ' ', 'X']]
+      Move: (0, 1), Wins/Visits: 0/1
+      State:[['O', 'O', ' '], ['X', 'X', 'O'], [' ', ' ', 'X']]
+  Move: (2, 1), Wins/Visits: 119/151
+  State:[['O', ' ', ' '], ['X', 'X', ' '], [' ', 'O', ' ']]
+    Move: (0, 1), Wins/Visits: 3/10
+    State:[['O', 'X', ' '], ['X', 'X', ' '], [' ', 'O', ' ']]
+      Move: (0, 2), Wins/Visits: 1/3
+      State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', 'O', ' ']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'X'], [' ', 'O', ' ']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', 'O', ' ']]
+      Move: (1, 2), Wins/Visits: 1/2
+      State:[['O', 'X', ' '], ['X', 'X', 'O'], [' ', 'O', ' ']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', 'X', 'X'], ['X', 'X', 'O'], [' ', 'O', ' ']]
+      Move: (2, 0), Wins/Visits: 0/2
+      State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', 'O', ' ']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], ['O', 'O', ' ']]
+      Move: (2, 2), Wins/Visits: 0/2
+      State:[['O', 'X', ' '], ['X', 'X', ' '], [' ', 'O', 'O']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], [' ', 'O', 'O']]
+    Move: (1, 2), Wins/Visits: 84/84
+    State:[['O', ' ', ' '], ['X', 'X', 'X'], [' ', 'O', ' ']]
+    Move: (2, 0), Wins/Visits: 13/21
+    State:[['O', ' ', ' '], ['X', 'X', ' '], ['X', 'O', ' ']]
+      Move: (0, 1), Wins/Visits: 8/9
+      State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (0, 2), Wins/Visits: 3/3
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (1, 2), Wins/Visits: 3/3
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], ['X', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 2/2
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'O', 'X']]
+          Move: (0, 2), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', ' '], ['X', 'O', 'X']]
+      Move: (0, 2), Wins/Visits: 1/4
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], ['X', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'O', 'X']]
+      Move: (1, 2), Wins/Visits: 0/2
+      State:[['O', ' ', ' '], ['X', 'X', 'O'], ['X', 'O', ' ']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', ' '], ['X', 'X', 'O'], ['X', 'O', ' ']]
+      Move: (2, 2), Wins/Visits: 3/5
+      State:[['O', ' ', ' '], ['X', 'X', ' '], ['X', 'O', 'O']]
+        Move: (0, 1), Wins/Visits: 1/2
+        State:[['O', 'X', ' '], ['X', 'X', ' '], ['X', 'O', 'O']]
+          Move: (0, 2), Wins/Visits: 0/1
+          State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', 'O', 'O']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', ' '], ['X', 'O', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', ' '], ['X', 'X', 'X'], ['X', 'O', 'O']]
+    Move: (0, 2), Wins/Visits: 11/19
+    State:[['O', ' ', 'X'], ['X', 'X', ' '], [' ', 'O', ' ']]
+      Move: (0, 1), Wins/Visits: 5/7
+      State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'O', ' ']]
+        Move: (1, 2), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'X'], [' ', 'O', ' ']]
+        Move: (2, 0), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'O', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'O', 'X']]
+      Move: (1, 2), Wins/Visits: 2/4
+      State:[['O', ' ', 'X'], ['X', 'X', 'O'], [' ', 'O', ' ']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', 'X'], ['X', 'X', 'O'], [' ', 'O', ' ']]
+        Move: (2, 0), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'O'], ['X', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 0/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'O'], [' ', 'O', 'X']]
+      Move: (2, 0), Wins/Visits: 0/2
+      State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', 'O', ' ']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], ['O', 'O', ' ']]
+      Move: (2, 2), Wins/Visits: 3/5
+      State:[['O', ' ', 'X'], ['X', 'X', ' '], [' ', 'O', 'O']]
+        Move: (0, 1), Wins/Visits: 1/2
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], [' ', 'O', 'O']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'X', 'X'], ['X', 'X', 'O'], [' ', 'O', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'X'], [' ', 'O', 'O']]
+        Move: (2, 0), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', ' '], ['X', 'O', 'O']]
+    Move: (2, 2), Wins/Visits: 8/16
+    State:[['O', ' ', ' '], ['X', 'X', ' '], [' ', 'O', 'X']]
+      Move: (0, 1), Wins/Visits: 3/5
+      State:[['O', 'O', ' '], ['X', 'X', ' '], [' ', 'O', 'X']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'O', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'O', 'X']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], [' ', 'O', 'X']]
+        Move: (2, 0), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'O', 'X']]
+      Move: (0, 2), Wins/Visits: 2/4
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], [' ', 'O', 'X']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', 'O', 'X']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], [' ', 'O', 'X']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'O', 'X']]
+      Move: (1, 2), Wins/Visits: 0/2
+      State:[['O', ' ', ' '], ['X', 'X', 'O'], [' ', 'O', 'X']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', ' '], ['X', 'X', 'O'], [' ', 'O', 'X']]
+      Move: (2, 0), Wins/Visits: 3/4
+      State:[['O', ' ', ' '], ['X', 'X', ' '], ['O', 'O', 'X']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', 'O', 'X']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', 'O', 'X']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', ' '], ['X', 'X', 'X'], ['O', 'O', 'X']]
+  Move: (2, 0), Wins/Visits: 129/160
+  State:[['O', ' ', ' '], ['X', 'X', ' '], ['O', ' ', ' ']]
+    Move: (0, 1), Wins/Visits: 2/9
+    State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', ' ', ' ']]
+      Move: (0, 2), Wins/Visits: 1/2
+      State:[['O', 'X', 'O'], ['X', 'X', ' '], ['O', ' ', ' ']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'X'], ['O', ' ', ' ']]
+      Move: (1, 2), Wins/Visits: 0/2
+      State:[['O', 'X', ' '], ['X', 'X', 'O'], ['O', ' ', ' ']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', 'O'], ['O', ' ', ' ']]
+      Move: (2, 1), Wins/Visits: 0/2
+      State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', 'O', ' ']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], ['O', 'O', ' ']]
+      Move: (2, 2), Wins/Visits: 0/2
+      State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', ' ', 'O']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], ['O', ' ', 'O']]
+    Move: (1, 2), Wins/Visits: 99/99
+    State:[['O', ' ', ' '], ['X', 'X', 'X'], ['O', ' ', ' ']]
+    Move: (2, 1), Wins/Visits: 19/27
+    State:[['O', ' ', ' '], ['X', 'X', ' '], ['O', 'X', ' ']]
+      Move: (0, 1), Wins/Visits: 2/5
+      State:[['O', 'O', ' '], ['X', 'X', ' '], ['O', 'X', ' ']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', 'X', ' ']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', 'X', ' ']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], ['O', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['O', 'X', 'X']]
+      Move: (0, 2), Wins/Visits: 8/9
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], ['O', 'X', ' ']]
+        Move: (0, 1), Wins/Visits: 3/3
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['O', 'X', ' ']]
+        Move: (1, 2), Wins/Visits: 3/3
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], ['O', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 2/2
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['O', 'X', 'X']]
+          Move: (0, 1), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', ' '], ['O', 'X', 'X']]
+      Move: (1, 2), Wins/Visits: 4/6
+      State:[['O', ' ', ' '], ['X', 'X', 'O'], ['O', 'X', ' ']]
+        Move: (0, 1), Wins/Visits: 2/2
+        State:[['O', 'X', ' '], ['X', 'X', 'O'], ['O', 'X', ' ']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', ' ', 'X'], ['X', 'X', 'O'], ['O', 'X', ' ']]
+          Move: (0, 1), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 1/1
+        State:[['O', ' ', ' '], ['X', 'X', 'O'], ['O', 'X', 'X']]
+      Move: (2, 2), Wins/Visits: 4/6
+      State:[['O', ' ', ' '], ['X', 'X', ' '], ['O', 'X', 'O']]
+        Move: (0, 1), Wins/Visits: 2/2
+        State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', 'X', 'O']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', 'X', 'O']]
+          Move: (0, 1), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', 'X', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', ' '], ['X', 'X', 'X'], ['O', 'X', 'O']]
+    Move: (0, 2), Wins/Visits: 2/9
+    State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', ' ', ' ']]
+      Move: (0, 1), Wins/Visits: 1/2
+      State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', ' ', ' ']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'O', 'X'], ['X', 'X', 'X'], ['O', ' ', ' ']]
+      Move: (1, 2), Wins/Visits: 1/2
+      State:[['O', ' ', 'X'], ['X', 'X', 'O'], ['O', ' ', ' ']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', 'X'], ['X', 'X', 'O'], ['O', ' ', ' ']]
+      Move: (2, 1), Wins/Visits: 0/2
+      State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', 'O', ' ']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], ['O', 'O', ' ']]
+      Move: (2, 2), Wins/Visits: 0/2
+      State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', ' ', 'O']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], ['O', ' ', 'O']]
+    Move: (2, 2), Wins/Visits: 7/15
+    State:[['O', ' ', ' '], ['X', 'X', ' '], ['O', ' ', 'X']]
+      Move: (0, 1), Wins/Visits: 3/5
+      State:[['O', 'O', ' '], ['X', 'X', ' '], ['O', ' ', 'X']]
+        Move: (0, 2), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['O', ' ', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], ['O', ' ', 'X']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], ['O', ' ', 'X']]
+        Move: (2, 1), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['O', 'X', 'X']]
+      Move: (0, 2), Wins/Visits: 2/4
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], ['O', ' ', 'X']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['O', ' ', 'X']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], ['O', ' ', 'X']]
+        Move: (2, 1), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['O', 'X', 'X']]
+      Move: (1, 2), Wins/Visits: 1/3
+      State:[['O', ' ', ' '], ['X', 'X', 'O'], ['O', ' ', 'X']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', ' '], ['X', 'X', 'O'], ['O', ' ', 'X']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'O'], ['O', ' ', 'X']]
+      Move: (2, 1), Wins/Visits: 0/2
+      State:[['O', ' ', ' '], ['X', 'X', ' '], ['O', 'O', 'X']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', 'O', 'X']]
+  Move: (0, 2), Wins/Visits: 199/234
+  State:[['O', ' ', 'O'], ['X', 'X', ' '], [' ', ' ', ' ']]
+    Move: (0, 1), Wins/Visits: 16/25
+    State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', ' ', ' ']]
+      Move: (1, 2), Wins/Visits: 2/4
+      State:[['O', 'X', 'O'], ['X', 'X', 'O'], [' ', ' ', ' ']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'O'], ['X', ' ', ' ']]
+        Move: (2, 1), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'O'], [' ', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'O'], [' ', ' ', 'X']]
+      Move: (2, 0), Wins/Visits: 5/7
+      State:[['O', 'X', 'O'], ['X', 'X', ' '], ['O', ' ', ' ']]
+        Move: (1, 2), Wins/Visits: 2/2
+        State:[['O', 'X', 'O'], ['X', 'X', 'X'], ['O', ' ', ' ']]
+        Move: (2, 1), Wins/Visits: 2/2
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['O', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 1/2
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['O', ' ', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'X', 'O'], ['X', 'X', 'O'], ['O', ' ', 'X']]
+      Move: (2, 1), Wins/Visits: 1/4
+      State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', 'O', ' ']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'X'], [' ', 'O', ' ']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', 'O', 'X']]
+      Move: (2, 2), Wins/Visits: 7/9
+      State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 3/3
+        State:[['O', 'X', 'O'], ['X', 'X', 'X'], [' ', ' ', 'O']]
+        Move: (2, 0), Wins/Visits: 2/3
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', ' ', 'O']]
+          Move: (1, 2), Wins/Visits: 1/1
+          State:[['O', 'X', 'O'], ['X', 'X', 'O'], ['X', ' ', 'O']]
+          Move: (2, 1), Wins/Visits: 0/1
+          State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', 'O', 'O']]
+        Move: (2, 1), Wins/Visits: 2/2
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', 'X', 'O']]
+    Move: (1, 2), Wins/Visits: 105/105
+    State:[['O', ' ', 'O'], ['X', 'X', 'X'], [' ', ' ', ' ']]
+    Move: (2, 1), Wins/Visits: 45/53
+    State:[['O', ' ', 'O'], ['X', 'X', ' '], [' ', 'X', ' ']]
+      Move: (0, 1), Wins/Visits: 18/18
+      State:[['O', 'O', 'O'], ['X', 'X', ' '], [' ', 'X', ' ']]
+      Move: (1, 2), Wins/Visits: 9/12
+      State:[['O', ' ', 'O'], ['X', 'X', 'O'], [' ', 'X', ' ']]
+        Move: (0, 1), Wins/Visits: 5/5
+        State:[['O', 'X', 'O'], ['X', 'X', 'O'], [' ', 'X', ' ']]
+        Move: (2, 0), Wins/Visits: 2/3
+        State:[['O', ' ', 'O'], ['X', 'X', 'O'], ['X', 'X', ' ']]
+          Move: (0, 1), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', 'O'], ['X', 'X', ' ']]
+          Move: (2, 2), Wins/Visits: 1/1
+          State:[['O', ' ', 'O'], ['X', 'X', 'O'], ['X', 'X', 'O']]
+        Move: (2, 2), Wins/Visits: 1/3
+        State:[['O', ' ', 'O'], ['X', 'X', 'O'], [' ', 'X', 'X']]
+          Move: (0, 1), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', 'O'], [' ', 'X', 'X']]
+          Move: (2, 0), Wins/Visits: 0/1
+          State:[['O', ' ', 'O'], ['X', 'X', 'O'], ['O', 'X', 'X']]
+      Move: (2, 0), Wins/Visits: 9/11
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], ['O', 'X', ' ']]
+        Move: (0, 1), Wins/Visits: 4/4
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['O', 'X', ' ']]
+        Move: (1, 2), Wins/Visits: 3/3
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], ['O', 'X', ' ']]
+        Move: (2, 2), Wins/Visits: 2/3
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['O', 'X', 'X']]
+          Move: (0, 1), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', ' '], ['O', 'X', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', ' ', 'O'], ['X', 'X', 'O'], ['O', 'X', 'X']]
+      Move: (2, 2), Wins/Visits: 9/11
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], [' ', 'X', 'O']]
+        Move: (0, 1), Wins/Visits: 4/4
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', 'X', 'O']]
+        Move: (1, 2), Wins/Visits: 4/4
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], [' ', 'X', 'O']]
+        Move: (2, 0), Wins/Visits: 1/2
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'X', 'O']]
+          Move: (0, 1), Wins/Visits: 1/1
+          State:[['O', 'O', 'O'], ['X', 'X', ' '], ['X', 'X', 'O']]
+    Move: (2, 0), Wins/Visits: 16/25
+    State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', ' ', ' ']]
+      Move: (0, 1), Wins/Visits: 12/12
+      State:[['O', 'O', 'O'], ['X', 'X', ' '], ['X', ' ', ' ']]
+      Move: (1, 2), Wins/Visits: 0/3
+      State:[['O', ' ', 'O'], ['X', 'X', 'O'], ['X', ' ', ' ']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'O'], ['X', ' ', ' ']]
+        Move: (2, 1), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'O'], ['X', 'X', ' ']]
+      Move: (2, 1), Wins/Visits: 2/5
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'O', ' ']]
+        Move: (0, 1), Wins/Visits: 1/2
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', 'O', ' ']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'X', 'O'], ['X', 'X', 'O'], ['X', 'O', ' ']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], ['X', 'O', ' ']]
+        Move: (2, 2), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'O', 'X']]
+      Move: (2, 2), Wins/Visits: 2/4
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], ['X', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'X', 'O']]
+    Move: (2, 2), Wins/Visits: 16/25
+    State:[['O', ' ', 'O'], ['X', 'X', ' '], [' ', ' ', 'X']]
+      Move: (0, 1), Wins/Visits: 11/11
+      State:[['O', 'O', 'O'], ['X', 'X', ' '], [' ', ' ', 'X']]
+      Move: (1, 2), Wins/Visits: 0/3
+      State:[['O', ' ', 'O'], ['X', 'X', 'O'], [' ', ' ', 'X']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'O'], [' ', ' ', 'X']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'O'], ['X', ' ', 'X']]
+      Move: (2, 0), Wins/Visits: 3/5
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], ['O', ' ', 'X']]
+        Move: (0, 1), Wins/Visits: 1/2
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['O', ' ', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'X', 'O'], ['X', 'X', 'O'], ['O', ' ', 'X']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], ['O', ' ', 'X']]
+        Move: (2, 1), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['O', 'X', 'X']]
+      Move: (2, 1), Wins/Visits: 2/5
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], [' ', 'O', 'X']]
+        Move: (0, 1), Wins/Visits: 1/2
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', 'O', 'X']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'X', 'O'], ['X', 'X', 'O'], [' ', 'O', 'X']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], [' ', 'O', 'X']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'O', 'X']]
+  Move: (2, 2), Wins/Visits: 115/146
+  State:[['O', ' ', ' '], ['X', 'X', ' '], [' ', ' ', 'O']]
+    Move: (0, 1), Wins/Visits: 4/11
+    State:[['O', 'X', ' '], ['X', 'X', ' '], [' ', ' ', 'O']]
+      Move: (0, 2), Wins/Visits: 2/3
+      State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', 'X'], [' ', ' ', 'O']]
+        Move: (2, 0), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', ' ', 'O']]
+      Move: (1, 2), Wins/Visits: 1/3
+      State:[['O', 'X', ' '], ['X', 'X', 'O'], [' ', ' ', 'O']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', 'X', 'X'], ['X', 'X', 'O'], [' ', ' ', 'O']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', 'X', ' '], ['X', 'X', 'O'], ['X', ' ', 'O']]
+      Move: (2, 0), Wins/Visits: 0/2
+      State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', ' ', 'O']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], ['O', ' ', 'O']]
+      Move: (2, 1), Wins/Visits: 0/2
+      State:[['O', 'X', ' '], ['X', 'X', ' '], [' ', 'O', 'O']]
+        Move: (0, 2), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], [' ', 'O', 'O']]
+    Move: (1, 2), Wins/Visits: 83/83
+    State:[['O', ' ', ' '], ['X', 'X', 'X'], [' ', ' ', 'O']]
+    Move: (2, 1), Wins/Visits: 8/16
+    State:[['O', ' ', ' '], ['X', 'X', ' '], [' ', 'X', 'O']]
+      Move: (0, 1), Wins/Visits: 2/4
+      State:[['O', 'O', ' '], ['X', 'X', ' '], [' ', 'X', 'O']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'X', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], [' ', 'X', 'O']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'X', 'O']]
+      Move: (0, 2), Wins/Visits: 2/4
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], [' ', 'X', 'O']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], [' ', 'X', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], [' ', 'X', 'O']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'X', 'O']]
+      Move: (1, 2), Wins/Visits: 2/4
+      State:[['O', ' ', ' '], ['X', 'X', 'O'], [' ', 'X', 'O']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', ' '], ['X', 'X', 'O'], [' ', 'X', 'O']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'O'], [' ', 'X', 'O']]
+        Move: (2, 0), Wins/Visits: 0/1
+        State:[['O', ' ', ' '], ['X', 'X', 'O'], ['X', 'X', 'O']]
+      Move: (2, 0), Wins/Visits: 2/3
+      State:[['O', ' ', ' '], ['X', 'X', ' '], ['O', 'X', 'O']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', ' '], ['X', 'X', ' '], ['O', 'X', 'O']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', 'X', 'O']]
+    Move: (2, 0), Wins/Visits: 8/15
+    State:[['O', ' ', ' '], ['X', 'X', ' '], ['X', ' ', 'O']]
+      Move: (0, 1), Wins/Visits: 2/4
+      State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', 'O', ' '], ['X', 'X', 'X'], ['X', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 0/1
+        State:[['O', 'O', ' '], ['X', 'X', ' '], ['X', 'X', 'O']]
+      Move: (0, 2), Wins/Visits: 2/4
+      State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'O'], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'O'], ['X', 'X', 'X'], ['X', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 0/1
+        State:[['O', ' ', 'O'], ['X', 'X', ' '], ['X', 'X', 'O']]
+      Move: (1, 2), Wins/Visits: 2/3
+      State:[['O', ' ', ' '], ['X', 'X', 'O'], ['X', ' ', 'O']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', ' '], ['X', 'X', 'O'], ['X', ' ', 'O']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'O'], ['X', ' ', 'O']]
+      Move: (2, 1), Wins/Visits: 2/3
+      State:[['O', ' ', ' '], ['X', 'X', ' '], ['X', 'O', 'O']]
+        Move: (0, 1), Wins/Visits: 1/1
+        State:[['O', 'X', ' '], ['X', 'X', ' '], ['X', 'O', 'O']]
+        Move: (0, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', ' '], ['X', 'O', 'O']]
+    Move: (0, 2), Wins/Visits: 12/20
+    State:[['O', ' ', 'X'], ['X', 'X', ' '], [' ', ' ', 'O']]
+      Move: (0, 1), Wins/Visits: 5/7
+      State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', 'X'], [' ', ' ', 'O']]
+        Move: (2, 0), Wins/Visits: 2/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], ['X', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 1/2
+        State:[['O', 'O', 'X'], ['X', 'X', ' '], [' ', 'X', 'O']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'O', 'X'], ['X', 'X', 'O'], [' ', 'X', 'O']]
+      Move: (1, 2), Wins/Visits: 3/5
+      State:[['O', ' ', 'X'], ['X', 'X', 'O'], [' ', ' ', 'O']]
+        Move: (0, 1), Wins/Visits: 1/2
+        State:[['O', 'X', 'X'], ['X', 'X', 'O'], [' ', ' ', 'O']]
+          Move: (2, 0), Wins/Visits: 0/1
+          State:[['O', 'X', 'X'], ['X', 'X', 'O'], ['O', ' ', 'O']]
+        Move: (2, 0), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'O'], ['X', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'O'], [' ', 'X', 'O']]
+      Move: (2, 0), Wins/Visits: 3/5
+      State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', ' ', 'O']]
+        Move: (0, 1), Wins/Visits: 1/2
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], ['O', ' ', 'O']]
+          Move: (1, 2), Wins/Visits: 0/1
+          State:[['O', 'X', 'X'], ['X', 'X', 'O'], ['O', ' ', 'O']]
+        Move: (1, 2), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', 'X'], ['O', ' ', 'O']]
+        Move: (2, 1), Wins/Visits: 1/1
+        State:[['O', ' ', 'X'], ['X', 'X', ' '], ['O', 'X', 'O']]
+      Move: (2, 1), Wins/Visits: 0/2
+      State:[['O', ' ', 'X'], ['X', 'X', ' '], [' ', 'O', 'O']]
+        Move: (0, 1), Wins/Visits: 0/1
+        State:[['O', 'X', 'X'], ['X', 'X', ' '], [' ', 'O', 'O']]

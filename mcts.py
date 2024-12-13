@@ -78,6 +78,10 @@ def expand(node):
     return child_node
 
 def simulation(node):
+    if ttt.terminal(node.state):
+        result = ttt.result(node.state)
+        return result
+    
     current = copy.deepcopy(node.state)
 
     while not ttt.terminal(current):
@@ -94,9 +98,9 @@ def backpropagate(node, result):
     while node is not None:
         node.visits += 1
         #current_player = ttt.current_player(node.state)
-        if result == 1 and node.player == c.X:
+        if result == 1 and node.player == c.O:
             node.wins += 1 #X win
-        elif result == -1 and node.player == c.O:
+        elif result == -1 and node.player == c.X:
             node.wins += 1 #O win
 
         node = node.parent
