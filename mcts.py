@@ -6,8 +6,21 @@ import constants as c
 import tictactoe as ttt
 
 from constants import Tree
+from time import time
 
-def mcts(board):
+def mcts(board, performance):
+    start_time = time()
+    
+    if board == ttt.initial():
+        end_time = time()
+        performance.add_elapse(end_time - start_time)
+        return random.choice(list(ttt.actions(board)))
+    
+    if ttt.terminal(board):
+        end_time = time()
+        performance.add_elapse(end_time - start_time)
+        return (-1,-1)
+    
     root = c.Tree(board)
     budget = 1000
     while budget > 0:
@@ -21,7 +34,7 @@ def mcts(board):
         if not ttt.terminal(node.state):
             node = expand(node)
 
-        # SIMULATION
+        # SIMULATION 
         result = simulation(node)
 
         # BACKPROPAGATION
@@ -29,10 +42,15 @@ def mcts(board):
 
         budget -= 1
 
-    with open('tree_output.txt','w') as file:
-        root.print_tree(file)
-    chosen_child = choose_best_child(root)
-    return chosen_child.move
+    if root.children:
+        chosen_child = choose_best_child(root)
+        end_time = time()
+        performance.add_elapse(end_time - start_time)
+        return chosen_child.move
+    else:
+        end_time = time()
+        performance.add_elapse(end_time - start_time)
+        return root.move
 
 def ucb(board):
     """
@@ -89,23 +107,41 @@ def simulation(node):
         if not moves:
             break
 
-        random_move = random.choice(moves)
-        current = ttt.resultant(current, random_move)
+        terminal_found = False
+        # Prioritize terminal moves
+        for move in moves:
+            next = ttt.resultant(current, move)
+            if ttt.terminal(next):
+                current = next
+                terminal_found = True
+                break
+        
+        if not terminal_found: # no terminal state -> proceed with random move
+            random_move = random.choice(moves)
+            current = ttt.resultant(current, random_move)
 
-    return ttt.result(current)
+    result = ttt.result(current)
+    #print(f"Simulation result: {result} for final state {ttt.print_board(current)}")
+    return result
 
 def backpropagate(node, result):    
+    #Backpropagate from current node back up to the root
     while node is not None:
+        #Update amount of visits for each player
         node.visits += 1
-        #current_player = ttt.current_player(node.state)
-        if result == 1 and node.player == c.O:
-            node.wins += 1 #X win
-        elif result == -1 and node.player == c.X:
-            node.wins += 1 #O win
+        
+        #Only update win if the right condition for player at root state
+        if (result == 1 and node.player == c.X) or (result == -1 and node.player == c.O):
+            node.wins += 1
+        elif result == 0:
+            node.wins += 0.5
 
+        #print(f"Backpropagating node {node.move}: Wins = {node.wins}, Visits = {node.visits}, Result = {result}")
+
+        #Move up the tree
         node = node.parent
 
-        # Flip the result to represent different players
+        #Alternate result as we move up and deal with different players
         result = -result
 
 def choose_best_child(node):

@@ -1,8 +1,13 @@
 import constants as c
 import tictactoe as ttt
 
-def minimax(board):
+from time import time
+
+def minimax(board, performance):
+    start_time = time()
     if ttt.terminal(board):
+        end_time = time()
+        performance.add_elapse(end_time - start_time)
         return None
     
     curr = ttt.current_player(board)
@@ -41,6 +46,8 @@ def minimax(board):
             if alpha >= beta:
                 break
 
+    end_time = time()
+    performance.add_elapse(end_time - start_time)
     return optimal_move
 
 

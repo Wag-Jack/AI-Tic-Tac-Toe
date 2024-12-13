@@ -70,6 +70,9 @@ def actions(board):
     return actions
 
 def resultant(board, action):
+    if terminal(board):
+        return board
+    
     resultant = copy.deepcopy(board)
 
     row, col = action

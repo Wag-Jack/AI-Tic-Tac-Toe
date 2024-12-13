@@ -24,6 +24,11 @@ class Tree:
         
         self.player = ttt.current_player(self.state)
 
+        if parent == None:
+            self.root_player = self.player
+        else:
+            self.root_player = self.parent.root_player
+
         if ttt.terminal(self.state):
             self.additional_moves = []
         else:
@@ -53,3 +58,12 @@ class Tree:
 
         for child in self.children:
             child.print_tree(file, level + 1)
+
+class Performance:
+    def __init__(self):
+        self.prev_elapsed_time = 0
+        self.all_elapsed = []
+
+    def add_elapse(self, time):
+        self.prev_elapsed_time = time
+        self.all_elapsed.append(time)

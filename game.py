@@ -1,6 +1,8 @@
 import time
+
 import tictactoe as ttt
 import constants as c
+
 from minimax import minimax
 from mcts import mcts
 
@@ -40,10 +42,11 @@ def game(mode):
                     print('Invalid input, please input a valid move.')
         
         else: # AI turn
+            null = c.Performance()
             if mode == 1:
-                ai_move = minimax(b)
+                ai_move = minimax(b, null)
             else:
-                ai_move = mcts(b)
+                ai_move = mcts(b, null)
             
             b[ai_move[0]][ai_move[1]] = turn
             ttt.print_board(b)
