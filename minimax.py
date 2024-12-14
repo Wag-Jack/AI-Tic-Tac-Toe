@@ -8,12 +8,16 @@ from time import time
 def minimax(board, performance):
     #Start timer to gather information on performance
     start_time = time()
+
+    #Ensure the amount of states visited initialized as zero
+    performance.states_visited = 0
     
     #Don't run minimax on a terminal state
     if ttt.terminal(board):
         #End timer and calculate execution time
         end_time = time()
         performance.add_elapse(end_time - start_time)
+        performance.states_visited = 1
         #Return a null move
         return (-1,-1)
     
@@ -30,7 +34,7 @@ def minimax(board, performance):
         #Iterate through each possible action for this board state
         for a in ttt.actions(board):
             #Compute the minimum value
-            val = min_value(ttt.resultant(board, a), alpha, beta)
+            val = min_value(ttt.resultant(board, a), alpha, beta, performance)
 
             #Determine the highest minimum value
             if val > score:
@@ -53,7 +57,7 @@ def minimax(board, performance):
         #Iterate through each possible action for this board state
         for a in ttt.actions(board):
             #Compute the maximum value
-            val = max_value(ttt.resultant(board, a), alpha, beta)
+            val = max_value(ttt.resultant(board, a), alpha, beta, performance)
 
             #Determine the lowest maximum value
             if val < score:
@@ -73,7 +77,10 @@ def minimax(board, performance):
     return optimal_move
 
 #Maximum value function for minimax
-def max_value(board, alpha, beta):
+def max_value(board, alpha, beta, performance):
+    #Increment the amount of states visited while traversing the algorithm
+    performance.states_visited += 1
+    
     #Return the result if we're currently at a terminal state
     if ttt.terminal(board):
         return ttt.result(board)
@@ -84,7 +91,7 @@ def max_value(board, alpha, beta):
     #Iterate through all possible actions for the state
     for a in ttt.actions(board):
         #Switch between max_value and min_value, return the highest value
-        v = max(v, min_value(ttt.resultant(board, a), alpha, beta))
+        v = max(v, min_value(ttt.resultant(board, a), alpha, beta, performance))
         #Determine alpha value
         alpha = max(alpha, v)
         #Prune the tree if alpha is better than beta
@@ -95,7 +102,10 @@ def max_value(board, alpha, beta):
     return v
 
 #Minimum value function for minimax
-def min_value(board, alpha, beta):
+def min_value(board, alpha, beta, performance):
+    #Increment the amount of states visited while traversing the algorithm
+    performance.states_visited += 1
+    
     #Return the result if we're currently at a terminal state
     if ttt.terminal(board):
         return ttt.result(board)
@@ -106,7 +116,7 @@ def min_value(board, alpha, beta):
     #Iterate through all possible actions for the state
     for a in ttt.actions(board):
         #Switch between min_value and max_value, returning the lowest value
-        v = min(v, max_value(ttt.resultant(board, a), alpha, beta))
+        v = min(v, max_value(ttt.resultant(board, a), alpha, beta, performance))
         #Determine beta value
         beta = min(beta, v)
         #Prune the tree if alpha is better than beta

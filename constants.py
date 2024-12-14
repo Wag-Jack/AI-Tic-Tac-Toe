@@ -57,6 +57,7 @@ class Performance:
     def __init__(self):
         self.prev_elapsed_time = 0
         self.all_prev_time = []
+        self.states_visited = 0
 
     def add_elapse(self, time):
         self.prev_elapsed_time = time

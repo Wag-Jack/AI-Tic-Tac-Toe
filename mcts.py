@@ -13,21 +13,15 @@ def mcts(board, performance):
     #Start timer to gather information on performance
     start_time = time()
     
-    """
-    #Examining the initial state means that tree has not been expanded at all, no moves to evaluate
-    if board == ttt.initial():
-        #End timer and calculate execution time
-        end_time = time()
-        performance.add_elapse(end_time - start_time)
-        #Since there's nothing to examine, return a random child
-        return random.choice(list(ttt.actions(board)))
-    """
-    
+    #Ensure the amount of states visited initialized to zero
+    performance.states_visited = 0
+
     #Terminal condition does not need to be expanded or explored
     if ttt.terminal(board):
         #End timer and calculate execution time
         end_time = time()
         performance.add_elapse(end_time - start_time)
+        performance.states_visited = 1
         #Since there's nothing to examine, return a null move
         return (-1,-1)
     
@@ -43,13 +37,15 @@ def mcts(board, performance):
         # SELECTION
         while not node.is_leaf() and node.is_fully_expanded() and not ttt.terminal(node.state): #and fully expanded
             node = selection(node)
+            performance.states_visited += 1
 
         # EXPANSION
         if not ttt.terminal(node.state):
             node = expand(node)
+            performance.states_visited += 1
 
         # SIMULATION 
-        result = simulation(node)
+        result = simulation(node, performance)
 
         # BACKPROPAGATION
         backpropagate(node, result)
@@ -138,7 +134,7 @@ def expand(node):
     return child_node
 
 #Function for simulation phase of Monte Carlo Tree Search
-def simulation(node):
+def simulation(node, performance):
     #Simulating a terminal mode simply means getting its result
     if ttt.terminal(node.state):
         result = ttt.result(node.state)
@@ -149,7 +145,8 @@ def simulation(node):
 
     #Simulate the current game board until we reach a terminal state
     while not ttt.terminal(current):
-        
+        performance.states_visited += 1
+
         #Get a list of possible moves to make
         moves = list(ttt.actions(current))
         if not moves:
