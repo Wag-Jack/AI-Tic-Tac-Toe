@@ -46,10 +46,8 @@ boards = [[[c.E,c.E,c.E],[c.E,c.E,c.E],[c.E,c.E,c.E]],
           [[c.X,c.X,c.E],[c.O,c.O,c.E],[c.E,c.E,c.E]],
           [[c.X,c.O,c.O],[c.X,c.E,c.E],[c.E,c.E,c.E]],
           [[c.X,c.O,c.X],[c.O,c.X,c.O],[c.O,c.X,c.E]],
-          [[c.X,c.X,c.E],[c.O,c.E,c.E],[c.E,c.O,c.E]],
-          [[c.X,c.O,c.X],[c.O,c.X,c.O],[c.E,c.E,c.X]],
-          [[c.X,c.O,c.X],[c.O,c.X,c.E],[c.E,c.E,c.O]],
-          [[c.X,c.O,c.E],[c.E,c.X,c.E],[c.O,c.E,c.E]]]
+          [[c.O,c.X,c.O],[c.X,c.O,c.X],[c.X,c.O,c.E]],
+          [[c.X,c.O,c.X],[c.X,c.O,c.X],[c.E,c.E,c.O]]]
 
 tester = c.Performance()
 
