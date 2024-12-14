@@ -53,12 +53,13 @@ class Tree:
     def is_root(self):
         return self.parent is None #Root node has no parents to it
     
+#Class to keep track of algorithm metrics for testing purposes
 class Performance:
     def __init__(self):
-        self.prev_elapsed_time = 0
-        self.all_prev_time = []
-        self.states_visited = 0
+        self.prev_elapsed_time = 0 #Last algorithm executions elapsed time
+        self.all_prev_times = [] #List of all algorithm execution times
+        self.states_visited = 0 #Amount of states gisited during algorithm iteration
 
     def add_elapse(self, time):
-        self.prev_elapsed_time = time
-        self.all_prev_time.append(time)
+        self.prev_elapsed_time = time #Change the previous elapsed time to what the time just was
+        self.all_prev_times.append(time) #Add this elapsed time to the master list
